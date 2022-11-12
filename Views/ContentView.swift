@@ -21,7 +21,7 @@ struct ContentView: View {
                     Text("Attraction List")
                 }.tag(1)
                 
-                Tab2View(VM: VM).tabItem{
+                MyView(VM: VM).tabItem{
                     Image(systemName: "map")
                     Text("Attraction Map")
                 }.tag(2)
