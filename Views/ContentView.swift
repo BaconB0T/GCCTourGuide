@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var tabIndex = 1
+
+    @ObservedObject var VM = ViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            TabView(selection: $tabIndex){
+                Tab1View(VM: VM).tabItem{
+                    Image(systemName: "list.bullet.rectangle.portrait")
+                    Text("Attraction List")
+                }.tag(1)
+                
+                Tab2View(VM: VM).tabItem{
+                    Image(systemName: "map")
+                    Text("Attraction Map")
+                }.tag(2)
+            }
+        }
+        .padding()
     }
 }
 

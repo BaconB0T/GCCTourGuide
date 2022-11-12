@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Tab2View: View {
+    @ObservedObject var VM : ViewModel
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +17,6 @@ struct Tab2View: View {
 
 struct Tab2View_Previews: PreviewProvider {
     static var previews: some View {
-        Tab2View()
+        Tab2View(VM: ViewModel())
     }
 }
