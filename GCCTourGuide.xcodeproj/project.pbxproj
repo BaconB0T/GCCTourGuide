@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CDCD225292033BA0098D91D /* View Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD224292033BA0098D91D /* View Model.swift */; };
 		AA5BA2CB291EA99F00CF6D05 /* GCCTourGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA2CA291EA99F00CF6D05 /* GCCTourGuideApp.swift */; };
 		AA5BA2CD291EA99F00CF6D05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA2CC291EA99F00CF6D05 /* ContentView.swift */; };
 		AA5BA2CF291EA9A500CF6D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA2CE291EA9A500CF6D05 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9CDCD224292033BA0098D91D /* View Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Model.swift"; sourceTree = "<group>"; };
 		AA5BA2C7291EA99F00CF6D05 /* GCCTourGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCCTourGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5BA2CA291EA99F00CF6D05 /* GCCTourGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCCTourGuideApp.swift; sourceTree = "<group>"; };
 		AA5BA2CC291EA99F00CF6D05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +34,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CDCD2212920335A0098D91D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CDCD222292033670098D91D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CDCD2232920337E0098D91D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9CDCD224292033BA0098D91D /* View Model.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AA5BA2BE291EA99F00CF6D05 = {
 			isa = PBXGroup;
 			children = (
+				9CDCD2232920337E0098D91D /* ViewModel */,
+				9CDCD222292033670098D91D /* Views */,
+				9CDCD2212920335A0098D91D /* Models */,
 				AA5BA2C9291EA99F00CF6D05 /* GCCTourGuide */,
 				AA5BA2C8291EA99F00CF6D05 /* Products */,
 			);
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDCD225292033BA0098D91D /* View Model.swift in Sources */,
 				AA5BA2CD291EA99F00CF6D05 /* ContentView.swift in Sources */,
 				AA5BA2CB291EA99F00CF6D05 /* GCCTourGuideApp.swift in Sources */,
 			);
