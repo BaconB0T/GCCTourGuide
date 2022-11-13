@@ -45,7 +45,8 @@
 			children = (
 				9CDCD22A292034A10098D91D /* Attractions.swift */,
 			);
-			path = Models;
+			name = Models;
+			path = ../Models;
 			sourceTree = "<group>";
 		};
 		9CDCD222292033670098D91D /* Views */ = {
@@ -55,7 +56,8 @@
 				9CDCD226292034710098D91D /* Tab1View.swift */,
 				9CDCD228292034820098D91D /* Tab2View.swift */,
 			);
-			path = Views;
+			name = Views;
+			path = ../Views;
 			sourceTree = "<group>";
 		};
 		9CDCD2232920337E0098D91D /* ViewModel */ = {
@@ -69,9 +71,6 @@
 		AA5BA2BE291EA99F00CF6D05 = {
 			isa = PBXGroup;
 			children = (
-				9CDCD2232920337E0098D91D /* ViewModel */,
-				9CDCD222292033670098D91D /* Views */,
-				9CDCD2212920335A0098D91D /* Models */,
 				AA5BA2C9291EA99F00CF6D05 /* GCCTourGuide */,
 				AA5BA2C8291EA99F00CF6D05 /* Products */,
 			);
@@ -88,6 +87,9 @@
 		AA5BA2C9291EA99F00CF6D05 /* GCCTourGuide */ = {
 			isa = PBXGroup;
 			children = (
+				9CDCD2232920337E0098D91D /* ViewModel */,
+				9CDCD222292033670098D91D /* Views */,
+				9CDCD2212920335A0098D91D /* Models */,
 				AA5BA2CA291EA99F00CF6D05 /* GCCTourGuideApp.swift */,
 				AA5BA2CE291EA9A500CF6D05 /* Assets.xcassets */,
 				AA5BA2D0291EA9A500CF6D05 /* Preview Content */,
