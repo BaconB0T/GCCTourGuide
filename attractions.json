@@ -1,0 +1,25 @@
+{
+    "count": 4,
+    "attractions": [
+        {
+            "name": "Staley Hall of Arts and Letters",
+            "short_name": "SHAL",
+            "description": "Staley Hall of Arts and Letters is a building on GCC's Campus."
+        },
+        {
+            "name": "Science, Technology, Engineering, and Mathematics",
+            "short_name": "STEM",
+            "description": "STEM is a building on GCC's Campus."
+        },
+        {
+            "name": "Physical Learning Center",
+            "short_name": "PLC",
+            "description": "The Physical Learning Center is a building on GCC's Campus."
+        },
+        {
+            "name": "Pew Fine Arts Center",
+            "short_name": "PEW",
+            "description": "Pew Fine Arts Center is a building on GCC's Campus."
+        }
+    ]
+}

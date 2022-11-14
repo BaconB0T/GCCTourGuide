@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView(selection: $tabIndex){
-                Tab1View(VM: VM).tabItem{
+                AttractionListView(VM: VM).tabItem{
                     Image(systemName: "list.bullet.rectangle.portrait")
                     Text("Attraction List")
                 }.tag(1)
