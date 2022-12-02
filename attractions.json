@@ -4,22 +4,92 @@
         {
             "name": "Staley Hall of Arts and Letters",
             "short_name": "SHAL",
-            "description": "Staley Hall of Arts and Letters is a building on GCC's Campus."
+            "description": "Staley Hall of Arts and Letters is a building on GCC's Campus.",
+            "location": {
+                "lat": 41.15464529518545,
+                "long": -80.07741582944116
+            }
         },
         {
             "name": "Science, Technology, Engineering, and Mathematics",
             "short_name": "STEM",
-            "description": "STEM is a building on GCC's Campus."
+            "description": "STEM is a building on GCC's Campus.",
+            "location": {
+                "lat": 41.1555742732833,
+                "long": -80.07884276456556
+            }
         },
         {
             "name": "Physical Learning Center",
             "short_name": "PLC",
-            "description": "The Physical Learning Center is a building on GCC's Campus."
+            "description": "The Physical Learning Center is a building on GCC's Campus.",
+            "location": {
+                "lat": 41.15585700313474,
+                "long": -80.07839215347364
+            }
         },
         {
             "name": "Pew Fine Arts Center",
             "short_name": "PEW",
-            "description": "Pew Fine Arts Center is a building on GCC's Campus."
+            "description": "Pew Fine Arts Center is a building on GCC's Campus.",
+            "location": {
+                "lat": 41.15286101443959,
+                "long": -80.07710335208415
+            }
+        },
+        {
+            "name": "Crawford Hall",
+            "short_name": "Crawford",
+            "description": "DESCRIBE ME PLEASE",
+            "location": {
+                "lat": 41.15571769943206,
+                "long": -80.08138814924192
+            }
+        },
+        {
+            "name": "Harbison Chapel",
+            "short_name": "Chapel",
+            "description": "DESCRIBE ME PLEASE",
+            "location": {
+                "lat": 41.156799857174725,
+                "long": -80.08076365267512
+            }
+        },
+        {
+            "name": "Hoyt Hall of Engineering",
+            "short_name": "Hoyt",
+            "description": "DESCRIBE ME PLEASE",
+            "location": {
+                "lat": 41.1546733415365,
+                "long": -80.078949108177
+            }
+        },
+        {
+            "name": "Henry Buhl Library",
+            "short_name": "Library",
+            "description": "DESCRIBE ME PLEASE",
+            "location": {
+                "lat": 41.15406495256201,
+                "long": -80.07943859769291
+            }
+        },
+        {
+            "name": "Mary Anderson Pew Café",
+            "short_name": "MAP Café",
+            "description": "DESCRIBE ME PLEASE",
+            "location": {
+                "lat": 41.15695082575129,
+                "long": -80.08005550582777
+            }
+        },
+        {
+            "name": "Hicks Café",
+            "short_name": "Hicks",
+            "description": "DESCRIBE ME PLEASE",
+            "location": {
+                "lat": 41.153300548531746,
+                "long": -80.07873854127108
+            }
         }
     ]
 }
