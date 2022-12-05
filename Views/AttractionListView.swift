@@ -12,10 +12,24 @@ struct AttractionView: View {
     
     var body: some View {
         VStack(alignment: .leading){
+            // maybe an image here if we can
             Text(attraction.name).font(.title)
             Text("This is a non interactive map of where I'm at. Maybe an image of what I look like. Implement me!").padding()
-            Text("This is a very interesting and informative fact!")
             Text("I am also known as: \(attraction.shortName)")
+            
+            Divider()
+            Text("History").font(.title2)
+            Text(attraction.history)
+            
+            // Fun Facts
+            if attraction.funFacts != nil {
+                Divider()
+                Text("Fun Facts").font(.title2)
+                ForEach(attraction.funFacts!, id: \.self) { ff in
+                    Text("- \(ff)")
+                }
+
+            }
             Spacer()
         }.padding()
     }

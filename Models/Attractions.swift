@@ -17,12 +17,13 @@ struct AllAttractions: Codable {
 // MARK: - Attraction
 struct Attraction: Codable, Identifiable {
     var id: UUID?
-    let name, shortName, description: String
+    let name, shortName, description, history: String
+    var funFacts: [String]? = nil
     var location: Location
-
     enum CodingKeys: String, CodingKey {
-        case name, description, location
+        case name, description, location, history
         case shortName = "short_name"
+        case funFacts = "fun_facts"
     }
 }
 
