@@ -15,7 +15,11 @@ struct AttractionView: View {
             // maybe an image here if we can
             Text(attraction.name).font(.title)
             if attraction.image != nil {
-                Image(attraction.image!)
+                Image(attraction.image!).resizable()
+                    .ignoresSafeArea()
+                    .shadow(radius: 20)
+                    .padding(.top, 5)
+                    .padding(.bottom, 5)
             }
 //            Text("This is a non interactive map of where I'm at. Maybe an image of what I look like. Implement me!").padding()
             Text("I am also known as: \(attraction.shortName)")
@@ -41,8 +45,8 @@ struct AttractionView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
                             .frame(height: 50)
-                            .shadow(radius: 10)
-                            .padding(.all, 10)
+                            .shadow(radius: 20)
+                            .padding(.all, 20)
                         
                         ZStack{
                             Spacer()
@@ -67,7 +71,23 @@ struct AttractionView: View {
                                     NavigationLink {
                                         AttractionView(attraction: a)
                                     } label: {
-                                        Text(a.name).foregroundColor(.black)
+                                        VStack{
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 20)
+                                                    .fill(.white)
+                                                    .frame(height: 80)
+                                                    .shadow(radius: 20)
+                                                   // .padding(.all, 1)
+                                                
+                                                ZStack{
+                                                    VStack{
+                                                        Text(a.name).foregroundColor(.black)
+                                                            .font(.title2)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
                                     }.padding()
                                 }
                             }.navigationTitle("Attractions")
