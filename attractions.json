@@ -9,7 +9,8 @@
             "location": {
                 "lat": 41.15464529518545,
                 "long": -80.07741582944116
-            }
+            },
+            "image": "shal-front"
         },
         {
             "name": "Science, Technology, Engineering, and Mathematics",
@@ -23,7 +24,8 @@
             "location": {
                 "lat": 41.1555742732833,
                 "long": -80.07884276456556
-            }
+            },
+            "image": "stem-front"
         },
         {
             "name": "Physical Learning Center",
@@ -36,7 +38,8 @@
             "location": {
                 "lat": 41.15585700313474,
                 "long": -80.07839215347364
-            }
+            },
+            "image": "plc-front"
         },
         {
             "name": "Pew Fine Arts Center",
@@ -46,7 +49,8 @@
             "location": {
                 "lat": 41.15286101443959,
                 "long": -80.07710335208415
-            }
+            },
+            "image": "pew-front"
         },
         {
             "name": "Crawford Hall",
@@ -56,7 +60,8 @@
             "location": {
                 "lat": 41.15571769943206,
                 "long": -80.08138814924192
-            }
+            },
+            "image": "crawford-front"
         },
         {
             "name": "Harbison Chapel",
@@ -69,7 +74,8 @@
             "location": {
                 "lat": 41.156799857174725,
                 "long": -80.08076365267512
-            }
+            },
+            "image": "chapel-front"
         },
         {
             "name": "Hoyt Hall of Engineering",
@@ -79,7 +85,8 @@
             "location": {
                 "lat": 41.1546733415365,
                 "long": -80.078949108177
-            }
+            },
+            "image": "hoyt-back"
         },
         {
             "name": "Henry Buhl Library",
@@ -92,7 +99,8 @@
             "location": {
                 "lat": 41.15406495256201,
                 "long": -80.07943859769291
-            }
+            },
+            "image": "library-front"
         },
         {
             "name": "Mary Anderson Pew Café",

@@ -20,10 +20,12 @@ struct Attraction: Codable, Identifiable {
     let name, shortName, description, history: String
     var funFacts: [String]? = nil
     var location: Location
+    var image: String? = nil
     enum CodingKeys: String, CodingKey {
-        case name, description, location, history
+        case name, description, location, history, image
         case shortName = "short_name"
         case funFacts = "fun_facts"
+        
     }
 }
 

@@ -14,7 +14,10 @@ struct AttractionView: View {
         VStack(alignment: .leading){
             // maybe an image here if we can
             Text(attraction.name).font(.title)
-            Text("This is a non interactive map of where I'm at. Maybe an image of what I look like. Implement me!").padding()
+            if attraction.image != nil {
+                Image(attraction.image!)
+            }
+//            Text("This is a non interactive map of where I'm at. Maybe an image of what I look like. Implement me!").padding()
             Text("I am also known as: \(attraction.shortName)")
             
             Divider()
