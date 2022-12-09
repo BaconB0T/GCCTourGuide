@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 struct AttractionView: View {
     var attraction: Attraction
+    @State var showAttraction: Bool = false
     
     init(attraction: Attraction){
         self.attraction = attraction
@@ -45,7 +46,9 @@ struct AttractionView: View {
                         
                     }
                     NavigationLink{
-                        MyView1(name: attraction.name, region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: attraction.location.lat, longitude: attraction.location.long), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)), attraction: attraction)
+                        MyView1(name: attraction.name, region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: attraction.location.lat, longitude: attraction.location.long), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)), attraction: attraction, showAttraction: $showAttraction).sheet(isPresented: $showAttraction) {
+                            AttractionView(attraction: attraction)
+                        }
                     }label:{
                         VStack{
                             ZStack{
