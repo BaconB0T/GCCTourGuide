@@ -133,7 +133,7 @@ struct MyView : UIViewRepresentable{
             if view.annotation?.title == "Grove City College"{
                 print("Grove City College ")
             }
-            var ret : Attraction = AllAttractions.attractions[0]
+            var ret : Attraction = VM.attractions[0]
             for a in VM.attractions {
                 if a.name == view.annotation?.title{
                     ret = a

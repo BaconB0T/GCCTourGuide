@@ -83,13 +83,15 @@ struct MyView1 : UIViewRepresentable{
         }
         
         // how to respond
-        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) -> some View{
             
-            ForEach(VM.attractions) { a in
+            var ret : Attraction = VM.attractions[0]
+            for a in VM.attractions {
                 if a.name == view.annotation?.title{
-                    AttractionView(attraction: a, VM: ViewModel())
+                    ret = a
                 }
             }
+            return AttractionView(attraction: ret, VM: ViewModel())
                 
         }
         
