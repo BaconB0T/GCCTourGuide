@@ -3,7 +3,8 @@
 //  GCCTourGuide
 //
 //  Created by Tyler Ridout on 12/7/22.
-//
+//  Edited by Eric Sayre on 12/9/22
+
 import SwiftUI
 
 import MapKit
@@ -11,13 +12,13 @@ import MapKit
 struct MyView1 : UIViewRepresentable{
     var name: String
     var region: MKCoordinateRegion
+    @ObservedObject var VM : ViewModel
     
-    init(name: String, region: MKCoordinateRegion) {
+    init(name: String, region: MKCoordinateRegion, VM: ViewModel) {
         self.name = name
         self.region = region
+        self.VM = VM
     }
-    
-    
     
     var point_of_interest: [MKPointAnnotation] {
         
@@ -55,7 +56,7 @@ struct MyView1 : UIViewRepresentable{
     
     // return the delegate
     func makeCoordinator() -> Coordinator {
-        return Coordinator(map: self)
+        return Coordinator(map: self, VM: VM)
     }
     
     
@@ -63,9 +64,11 @@ struct MyView1 : UIViewRepresentable{
     class Coordinator : NSObject, MKMapViewDelegate{
         
         var map : MyView1
+        @ObservedObject var VM: ViewModel
         
-        init(map: MyView1){
+        init(map: MyView1, VM: ViewModel){
             self.map = map
+            self.VM = VM
         }
         
         // how the annotation is displayed
@@ -82,6 +85,12 @@ struct MyView1 : UIViewRepresentable{
         // how to respond
         func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
             
+            ForEach(VM.attractions) { a in
+                if a.name == view.annotation?.title{
+                    AttractionView(attraction: a, VM: ViewModel())
+                }
+            }
+                
         }
         
         
@@ -93,7 +102,7 @@ struct MyView1 : UIViewRepresentable{
 struct MapView: View {
         
     var body: some View {
-        MyView1(name: String(), region: MKCoordinateRegion())
+        MyView1(name: String(), region: MKCoordinateRegion(), VM: ViewModel())
 
     }
 }

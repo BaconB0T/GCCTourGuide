@@ -3,7 +3,7 @@
 //  GCCTourGuide
 //
 //  Created by Tyler Ridout on 11/12/22.
-//
+//  Edited by Eric Sayre on 12/9/22
 
 import SwiftUI
 
@@ -101,7 +101,7 @@ struct MyView : UIViewRepresentable{
     
     // return the delegate
     func makeCoordinator() -> Coordinator {
-        return Coordinator(map: self)
+        return Coordinator(map: self, VM: ViewModel())
     }
     
     
@@ -109,9 +109,11 @@ struct MyView : UIViewRepresentable{
     class Coordinator : NSObject, MKMapViewDelegate{
         
         var map : MyView
+        @ObservedObject var VM: ViewModel
         
-        init(map: MyView){
+        init(map: MyView, VM: ViewModel){
             self.map = map
+            self.VM = VM
         }
         
         // how the annotation is displayed
@@ -126,13 +128,18 @@ struct MyView : UIViewRepresentable{
         }
         
         // how to respond
-        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) -> some View{
             
             if view.annotation?.title == "Grove City College"{
                 print("Grove City College ")
-            }else if view.annotation?.title == "SwiftUI"{
-                print("SwiftUI")
             }
+            var ret : Attraction = AllAttractions.attractions[0]
+            for a in VM.attractions {
+                if a.name == view.annotation?.title{
+                    ret = a
+                }
+            }
+            return AttractionView(attraction: ret, VM: ViewModel())
             
         }
         
