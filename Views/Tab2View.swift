@@ -11,10 +11,12 @@ import MapKit
 
 struct MyView : UIViewRepresentable{
     @ObservedObject var VM : ViewModel
+    @Binding var showAttraction: Bool
+    @Binding var shownAttractionIndex: Int
     
-    init(VM: ViewModel) {
-        self.VM = VM
-    }
+//    init(VM: ViewModel) {
+//        self.VM = VM
+//    }
     
     var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.154817, longitude: -80.081528), span: MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008))
     
@@ -131,19 +133,23 @@ struct MyView : UIViewRepresentable{
         }
         
         // how to respond
-        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) -> some View{
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
             
-            if view.annotation?.title == "Grove City College"{
-                print("Grove City College ")
-            }
-            var ret : Attraction = VM.attractions[0]
-            for a in VM.attractions{
-                if a.name == view.annotation?.title{
-                    ret = a
+            for i in 0..<VM.attractions.count {
+                if view.annotation?.title == VM.attractions[i].name {
+                    map.showAttraction = true
+                    map.shownAttractionIndex = i
+                    break
                 }
             }
+//            var ret : Attraction = VM.attractions[0]
+//            for a in VM.attractions{
+//                if a.name == view.annotation?.title{
+//                    ret = a
+//                }
+//            }
             
-            return AttractionView(attraction: ret)
+//            return AttractionView(attraction: ret)
         }
         
         

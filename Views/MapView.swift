@@ -13,12 +13,13 @@ struct MyView1 : UIViewRepresentable{
     var name: String
     var region: MKCoordinateRegion
     var attraction: Attraction
+    @Binding var showAttraction: Bool
     
-    init(name: String, region: MKCoordinateRegion, attraction: Attraction) {
-        self.name = name
-        self.region = region
-        self.attraction = attraction
-    }
+//    init(name: String, region: MKCoordinateRegion, attraction: Attraction, showAttraction: Bool) {
+//        self.name = name
+//        self.region = region
+//        self.attraction = attraction
+//    }
     
     var point_of_interest: [MKPointAnnotation] {
         
@@ -83,9 +84,10 @@ struct MyView1 : UIViewRepresentable{
         }
         
         // how to respond
-        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) -> some View{
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
             
-            return AttractionView(attraction: attraction)
+            map.showAttraction = true
+            // AttractionView(attraction: attraction)
                 
         }
         
