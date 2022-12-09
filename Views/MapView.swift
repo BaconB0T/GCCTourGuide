@@ -12,12 +12,12 @@ import MapKit
 struct MyView1 : UIViewRepresentable{
     var name: String
     var region: MKCoordinateRegion
-    @ObservedObject var VM : ViewModel
+    var attraction: Attraction
     
-    init(name: String, region: MKCoordinateRegion, VM: ViewModel) {
+    init(name: String, region: MKCoordinateRegion, attraction: Attraction) {
         self.name = name
         self.region = region
-        self.VM = VM
+        self.attraction = attraction
     }
     
     var point_of_interest: [MKPointAnnotation] {
@@ -56,7 +56,7 @@ struct MyView1 : UIViewRepresentable{
     
     // return the delegate
     func makeCoordinator() -> Coordinator {
-        return Coordinator(map: self, VM: VM)
+        return Coordinator(map: self, attraction: attraction)
     }
     
     
@@ -64,11 +64,11 @@ struct MyView1 : UIViewRepresentable{
     class Coordinator : NSObject, MKMapViewDelegate{
         
         var map : MyView1
-        @ObservedObject var VM: ViewModel
+        var attraction : Attraction
         
-        init(map: MyView1, VM: ViewModel){
+        init(map: MyView1, attraction: Attraction){
             self.map = map
-            self.VM = VM
+            self.attraction = attraction
         }
         
         // how the annotation is displayed
@@ -85,13 +85,7 @@ struct MyView1 : UIViewRepresentable{
         // how to respond
         func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) -> some View{
             
-            var ret : Attraction = VM.attractions[0]
-            for a in VM.attractions {
-                if a.name == view.annotation?.title{
-                    ret = a
-                }
-            }
-            return AttractionView(attraction: ret, VM: ViewModel())
+            return AttractionView(attraction: attraction)
                 
         }
         
@@ -101,10 +95,11 @@ struct MyView1 : UIViewRepresentable{
     
 }
 
-struct MapView: View {
-        
-    var body: some View {
-        MyView1(name: String(), region: MKCoordinateRegion(), VM: ViewModel())
-
-    }
-}
+//struct MapView: View {
+//
+//
+//    var body: some View {
+//        MyView1(name: String(), region: MKCoordinateRegion(), attraction: Attraction())
+//
+//    }
+//}

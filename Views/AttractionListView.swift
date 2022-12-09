@@ -10,6 +10,10 @@ import MapKit
 struct AttractionView: View {
     var attraction: Attraction
     
+    init(attraction: Attraction){
+        self.attraction = attraction
+    }
+    
     var body: some View {
         GeometryReader { g in
             ScrollView {
@@ -41,7 +45,7 @@ struct AttractionView: View {
                         
                     }
                     NavigationLink{
-                        MyView1(name: attraction.name, region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: attraction.location.lat, longitude: attraction.location.long), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)))
+                        MyView1(name: attraction.name, region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: attraction.location.lat, longitude: attraction.location.long), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)), attraction: attraction)
                     }label:{
                         VStack{
                             ZStack{
@@ -65,6 +69,7 @@ struct AttractionView: View {
         }.padding()
     }
 }
+
 
 struct AttractionListView: View {
     

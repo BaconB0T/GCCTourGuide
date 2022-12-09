@@ -11,7 +11,10 @@ import MapKit
 
 struct MyView : UIViewRepresentable{
     @ObservedObject var VM : ViewModel
-
+    
+    init(VM: ViewModel) {
+        self.VM = VM
+    }
     
     var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.154817, longitude: -80.081528), span: MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008))
     
@@ -109,7 +112,7 @@ struct MyView : UIViewRepresentable{
     class Coordinator : NSObject, MKMapViewDelegate{
         
         var map : MyView
-        @ObservedObject var VM: ViewModel
+        @ObservedObject var VM : ViewModel
         
         init(map: MyView, VM: ViewModel){
             self.map = map
@@ -134,13 +137,13 @@ struct MyView : UIViewRepresentable{
                 print("Grove City College ")
             }
             var ret : Attraction = VM.attractions[0]
-            for a in VM.attractions {
+            for a in VM.attractions{
                 if a.name == view.annotation?.title{
                     ret = a
                 }
             }
-            return AttractionView(attraction: ret, VM: ViewModel())
             
+            return AttractionView(attraction: ret)
         }
         
         
@@ -148,10 +151,10 @@ struct MyView : UIViewRepresentable{
     }
     
 }
-struct Tab2View: View {
-        
-    var body: some View {
-        MyView(VM: ViewModel())
-
-    }
-}
+//struct Tab2View: View {
+//
+//    var body: some View {
+//        MyView(attraction: Attraction())
+//
+//    }
+//}
