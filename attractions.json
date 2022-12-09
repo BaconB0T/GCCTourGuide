@@ -4,8 +4,8 @@
         {
             "name": "Staley Hall of Arts and Letters",
             "short_name": "SHAL",
-            "description": "Staley Hall of Arts and Letters is a building on GCC's Campus.",
-            "history": "History of SHAL",
+            "description": "Located on at the top of upper campus. Technology is tops with cable internet connections and high-quality wireless easily accessible throughout the facility. Classrooms include case-style lecture rooms, lab desks, flexible seating arrangements, and seminar rooms to facilitate class discussion for smaller, usually upper-level, classes. Most classrooms are equipped with multimedia platforms for learning.The building boasts a stunning balcony on the third floor in addition to an outdoor classroom and our pre-school on the first floor. To the west, the building looks out to Breen Student Union and a courtyard. All faculty offices are set up in suite-style arrangements that facilitate faculty-student interaction. They are also used for small departmental receptions and provide additional space for study or group work during the day.",
+            "history": "Re-dedicated in 2021, the Staley Hall of Arts and Letters houses all of the departments in the Alva J. Calderwood School of Arts and Letters except for music. It is a three floor, state-of-the-art building with numerous open spaces as well as nooks for studying or group work. Built in 2002, the building holds the College's Education Curriculum Library and the Sticht Lecture Hall (site of numerous high profile and guest lectures of national stature).",
             "location": {
                 "lat": 41.15464529518545,
                 "long": -80.07741582944116
@@ -15,12 +15,12 @@
         {
             "name": "Science, Technology, Engineering, and Mathematics",
             "short_name": "STEM",
-            "description": "STEM is a building on GCC's Campus.",
+            "description": "Aware of our responsibility to exercise wise stewardship of resources, STEM Hall was designed with a number of energy-efficient features including ventilation, rooms that respond to user demand and occupancy, and windows that darken in direct sunlight. STEM Hall features classrooms and laboratories with best in class equipment to accommodate chemistry, biology, physics, and computer science classes. The building is designed to cultivate innovation and collaboration with common areas and study spaces for student use. Writing on the walls in encouraged in this building due to the generous use of whiteboard wallpaper. STEM Hall houses the 110-seat Earl C. Gregg lecture hall, faculty offices, and a vivarium.",
             "fun_facts": [
                 "The windows facing the Breen Student Union automatically tint based on sunlight.",
                 "The windows are fun to smash."
             ],
-            "history": "History of STEM",
+            "history": "STEM Hall, the College’s science, technology, engineering, and mathematics building, opened in August 2013. The $39.5 million facility established Grove City College as a premier liberal arts and sciences college in the region.",
             "location": {
                 "lat": 41.1555742732833,
                 "long": -80.07884276456556
@@ -30,11 +30,12 @@
         {
             "name": "Physical Learning Center",
             "short_name": "PLC",
-            "description": "The Physical Learning Center is a building on GCC's Campus.",
+            "description": "The Physical Learning Center (PLC) is at the heart of athletics and recreation at Grove City College.",
             "fun_facts": [
-                "It's confusing layout has some students call it a labyrinth."
+                "It's confusing layout has some students call it a labyrinth.",
+                "The PLC is home to the Grove City College Athletic Hall of Fame highlighting the many athletic and academic achievements of Wolverine student-athletes throughout the College's history."
             ],
-            "history": "History of PLC",
+            "history": "The 168,000 square-foot facility was built in 1953. When initially constructed, the PLC was approximately 95,000 square-feet and housed the arena, recreation pool, four racquetball courts, one intramural room, multiple locker-room facilities, and office space for faculty and staff. A 63,180 square-foot addition to the facility in 1989 provided for Longnecker Pool, a second intramural room, four more racquetball courts, two dance studios, and a 4,180 square-foot weight and fitness room.",
             "location": {
                 "lat": 41.15585700313474,
                 "long": -80.07839215347364
@@ -44,7 +45,7 @@
         {
             "name": "Pew Fine Arts Center",
             "short_name": "PEW",
-            "description": "Pew Fine Arts Center is a building on GCC's Campus.",
+            "description": "The Pew Fine Arts Center, home of the Department of Music and Fine Arts, combines exceptional performance spaces with outstanding technology to offer students and visitors the best in cultural experiences.",
             "history": "History of PEW",
             "location": {
                 "lat": 41.15286101443959,
@@ -55,7 +56,7 @@
         {
             "name": "Crawford Hall",
             "short_name": "Crawford",
-            "description": "DESCRIBE ME PLEASE",
+            "description": "Administrative offices and an auditiorium",
             "history": "History of Crawford",
             "location": {
                 "lat": 41.15571769943206,
@@ -66,11 +67,11 @@
         {
             "name": "Harbison Chapel",
             "short_name": "Harbison",
-            "description": "DESCRIBE ME PLEASE",
+            "description": "Harbison Chapel is the heart of spiritual life on campus and provides an inspiring place of worship and quiet meditation.",
             "fun_facts": [
                 "Harbison Chapel can be used for weddings."
             ],
-            "history": "History of Chapel",
+            "history": "Built by the sons of Samuel P. Harbison as a memorial to their father (who for many years served the College as a trustee), the beauty of the interior is enhanced by hand-carved beams, woodwork and jewel-like stained glass windows. The organ, a four manual Kimball, is a memorial to Frances St. Leger Babcock, wife of F.R. Babcock, a former president of the Board of Trustees. The east and west transepts of the chapel were gifts respectively of Mary Ethel Pew, a trustee of the College, and the Presbyterian Church. In recent years, the chapel technology has been upgraded without distracting from its original aesthetic.",
             "location": {
                 "lat": 41.156799857174725,
                 "long": -80.08076365267512
@@ -80,7 +81,7 @@
         {
             "name": "Hoyt Hall of Engineering",
             "short_name": "Hoyt",
-            "description": "DESCRIBE ME PLEASE",
+            "description": "Hoyt Hall is home to the Department of Electrical and Computer Engineering and Mechanical Engineering. The building features classrooms, teaching and research laboratories, capstone project spaces, a large machine shop with state-of-the-art equipment, and collaborative spaces for group activities. The building is home to engineering competition teams such as the SAE Baja Team and the ASME Human-Powered Vehicle Team.",
             "history": "History of Hoyt",
             "location": {
                 "lat": 41.1546733415365,
@@ -95,7 +96,7 @@
             "fun_facts": [
                 "Included at the north end is the Urban Trail Café that has coffee and treats for sale."
             ],
-            "history": "History of Library",
+            "history": "The library is named in memory of Henry Buhl Jr., a leading merchant and philanthropist of Pittsburgh, who was a member of the College's Board of Trustees from 1898 until his death in 1927. The building honors Buhl's long and faithful service as a trustee and recognizes the generous contribution made by the Board of Managers of the Buhl Foundation toward the construction of the library.",
             "location": {
                 "lat": 41.15406495256201,
                 "long": -80.07943859769291
@@ -105,7 +106,7 @@
         {
             "name": "Mary Anderson Pew Café",
             "short_name": "MAP Café",
-            "description": "DESCRIBE ME PLEASE",
+            "description": "One of two dine-in options, located in the female dorm of MAP",
             "history": "History of MAP Café",
             "location": {
                 "lat": 41.15695082575129,
@@ -115,7 +116,7 @@
         {
             "name": "Hicks Café",
             "short_name": "Hicks",
-            "description": "DESCRIBE ME PLEASE",
+            "description": "One of two dine-in options, located in the male dorm of Hicks",
             "history": "History of Hicks Café",
             "location": {
                 "lat": 41.153300548531746,
